@@ -4,12 +4,13 @@ import Footer from "../../components/Footer";
 
 const RootLayout = () => {
   return (
-    <div>
+    <div className="">
       <Header></Header>
       {/* header */}
-      
-      <Outlet></Outlet>
 
+      <div className="min-h-[calc(100vh-228px)] container mx-auto">
+        <Outlet></Outlet>
+      </div>
       {/* footer */}
       <Footer></Footer>
     </div>
