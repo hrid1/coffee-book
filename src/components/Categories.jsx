@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Categories = ({ categories }) => {
   return (
     <div>
-      <div role="tablist" className="tabs tabs-lifted">
+      <div role="tablist" className="tabs tabs-lifted my-6">
         {categories.map((category) => (
           <NavLink
             to={`category/${category.category}`}

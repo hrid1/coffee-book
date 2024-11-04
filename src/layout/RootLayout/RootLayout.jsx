@@ -5,7 +5,9 @@ import Footer from "../../components/Footer";
 const RootLayout = () => {
   return (
     <div className="">
-      <Header></Header>
+      <div className="h-16">
+        <Header></Header>
+      </div>
       {/* header */}
 
       <div className="min-h-[calc(100vh-228px)] container mx-auto px-12">

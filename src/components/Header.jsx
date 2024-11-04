@@ -3,23 +3,36 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const navLinks = (
     <>
-      <li>
-        {" "}
-        <NavLink to="/">Home</NavLink>{" "}
-      </li>
-      <li>
-        {" "}
-        <NavLink to="/coffees">Coffees</NavLink>{" "}
-      </li>
-      <li>
-        {" "}
-        <NavLink to="/dashboard">DashBoard </NavLink>{" "}
-      </li>
+      {" "}
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? `font-semibold text-yellow-500` : ""
+        }
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? `font-semibold text-yellow-500` : ""
+        }
+        to="/coffees"
+      >
+        Coffees
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? `font-semibold text-yellow-500` : ""
+        }
+        to="/dashboard"
+      >
+        DashBoard
+      </NavLink>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar backdrop-blur-2xl bg-white/50 z-10 fixed ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,12 +58,13 @@ const Header = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost text-xl">COFE2_BooK</Link>
+        <Link to="/" className="btn btn-ghost text-xl">
+          COFE2_BooK
+        </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 gap-4">{navLinks}</ul>
       </div>
-     
     </div>
   );
 };
